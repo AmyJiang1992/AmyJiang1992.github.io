@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="文章目标人群：刚刚利用各路教程终于搭建好了Hexo，准备写下第一篇文章的同学们。我的基本情况：hexo + Github pages搭建的博客，nexT主题，Mac OS Sierra操纵系统。 现在，让我们开始吧！ Step 0: 基本了解 + 准备工作 我们打开hexo所在目录 -&amp;gt; source文件夹 -&amp;gt; _posts, 可以看到一个hello-world.md文件。 回到he">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何用hexo写文章(1)">
+<meta property="og:url" content="http://yoursite.com/2017/09/15/如何用hexo写文章-1/index.html">
+<meta property="og:site_name" content="Ruotong&#39;s Blog">
+<meta property="og:description" content="文章目标人群：刚刚利用各路教程终于搭建好了Hexo，准备写下第一篇文章的同学们。我的基本情况：hexo + Github pages搭建的博客，nexT主题，Mac OS Sierra操纵系统。 现在，让我们开始吧！ Step 0: 基本了解 + 准备工作 我们打开hexo所在目录 -&amp;gt; source文件夹 -&amp;gt; _posts, 可以看到一个hello-world.md文件。 回到he">
+<meta property="og:updated_time" content="2018-04-03T04:39:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何用hexo写文章(1)">
+<meta name="twitter:description" content="文章目标人群：刚刚利用各路教程终于搭建好了Hexo，准备写下第一篇文章的同学们。我的基本情况：hexo + Github pages搭建的博客，nexT主题，Mac OS Sierra操纵系统。 现在，让我们开始吧！ Step 0: 基本了解 + 准备工作 我们打开hexo所在目录 -&amp;gt; source文件夹 -&amp;gt; _posts, 可以看到一个hello-world.md文件。 回到he">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/09/15/如何用hexo写文章-1/"/>
+
+
+
+
+
+  <title>如何用hexo写文章(1) | Ruotong's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ruotong's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">cute and interesting and haha</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/15/如何用hexo写文章-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ruotong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruotong's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">如何用hexo写文章(1)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-15T19:00:41+08:00">
+                2017-09-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>文章目标人群：刚刚利用各路教程终于搭建好了Hexo，准备写下第一篇文章的同学们。<br>我的基本情况：hexo + Github pages搭建的博客，nexT主题，Mac OS Sierra操纵系统。</p>
+<p>现在，让我们开始吧！</p>
+<h4 id="Step-0-基本了解-准备工作"><a href="#Step-0-基本了解-准备工作" class="headerlink" title="Step 0: 基本了解 + 准备工作"></a>Step 0: 基本了解 + 准备工作</h4><ol>
+<li>我们打开hexo所在目录 -&gt; source文件夹 -&gt; _posts, 可以看到一个hello-world.md文件。</li>
+<li>回到hexo文件夹，就是里面有_config.yml, source, themes等等的那个。</li>
+<li>用hexo server命令来进行本地预览，在浏览器输入<a href="http://localhost:4000/即可。" target="_blank" rel="external">http://localhost:4000/即可。</a></li>
+</ol>
+<p>什么是md文件？这个_posts文件夹是一个比较特殊的文件夹，因为它装着所有你发布出去的文章。</p>
+<h4 id="Step-1-新建文章"><a href="#Step-1-新建文章" class="headerlink" title="Step 1: 新建文章"></a>Step 1: 新建文章</h4><p>在hexo所在目录下，打开terminal，在命令行输入：</p>
+<p>hexo new a</p>
+<p>也可以给标题加上双引号,”a”。<br>通过这行命令，我们新建出来了一个page，而且是一个post page，page还有其他种，稍后我们会提到。<br>正确结果：我们会在_posts里看见多了一个a.md文件。因此我们也知道了，默认情况下，hexo为我们创建markdown文件。刷新页面（<a href="http://localhost:4000/）我们能看见新添一个名字叫a的文章，没有任何内容。" target="_blank" rel="external">http://localhost:4000/）我们能看见新添一个名字叫a的文章，没有任何内容。</a></p>
+<p>接下来我们打开a.md文件</p>
+<blockquote>
+<hr>
+<p>title: 1<br>date: 2017-09-15 19:00:41</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>在这里随便写点什么</p>
+</blockquote>
+<p>然后再刷新,就会看到你写的内容。与此同时，hexo也会自动为这个post生成一个页面，当我们点击标题，就会进入那个页面。</p>
+<h4 id="Step-2-草稿箱"><a href="#Step-2-草稿箱" class="headerlink" title="Step 2:  草稿箱"></a>Step 2:  草稿箱</h4><p>除了post page，我们还可以新建draft page，也就是草稿。很多时候我们需要先写成草稿暂不发布。draft page就可以满足我们的要求，我们的网站上是看不到草稿文件的。</p>
+<p>输入 hexo new draft b<br>我们会在source下看见一个新的文件夹，_drafts，这个里面会装所有的草稿文件。</p>
+<p>那如何才可以在不发布的情况下，预览一下文章在网站上显示的样子呢？</p>
+<p>输入 hexo server –draft<br>当然，你要先shut down原来开着那个server，才可以开启新的server。如此一来，我们就可以预览草稿文件啦</p>
+<h4 id="Step-3-发布草稿"><a href="#Step-3-发布草稿" class="headerlink" title="Step 3: 发布草稿"></a>Step 3: 发布草稿</h4><p>当你准备好了要发布你的草稿时<br>输入 hexo publish b 就可以了<br>你会发现_drafts里的b.md不见了，跑到了_posts里面。</p>
+<h4 id="Step-4-normal-page"><a href="#Step-4-normal-page" class="headerlink" title="Step 4: normal page"></a>Step 4: normal page</h4><p>我目前还不知道该如何用中文称呼这类页面。我们可以把post和draft统称为blog pages，在这之外的一种就是normal pages， 类似一个网站上的“关于”页面。<br>输入 hexo new page c 即可<br>和前两种不同，这个命令会在source文件夹内创建出c文件夹，与_posts，_drafts并列。里面有一个index.md文件。<br>刷新我们的个人网页，你会发现c并没有出现在页面内，那它在哪儿呢？你需要在网址加上c/， 即<a href="http://localhost:4000/c/" target="_blank" rel="external">http://localhost:4000/c/</a><br>正因为c不是一个blog page，所以它也不会出现在blog列表中，要通过URL来显示。</p>
+<h4 id="Step-5-小tip"><a href="#Step-5-小tip" class="headerlink" title="Step 5: 小tip"></a>Step 5: 小tip</h4><p>现在我们了解到page一共有三种，post，draft，normal，那么大家可以想一下，问什么一开始的时候我们用hexo new a 就直接生成了post呢？<br>那是因为我们默认这样。<br>打开熟悉的_config.yml文件，找到default_layout: post。如果你习惯默认成草稿，那就把它改成draft就好。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/11/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/17/我为什么要写博客/" rel="prev" title="我为什么要写博客">
+                我为什么要写博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <p class="site-author-name" itemprop="name">Ruotong</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-0-基本了解-准备工作"><span class="nav-number">1.</span> <span class="nav-text">Step 0: 基本了解 + 准备工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-1-新建文章"><span class="nav-number">2.</span> <span class="nav-text">Step 1: 新建文章</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tags"><span class="nav-number"></span> <span class="nav-text">tags:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-2-草稿箱"><span class="nav-number">1.</span> <span class="nav-text">Step 2:  草稿箱</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-3-发布草稿"><span class="nav-number">2.</span> <span class="nav-text">Step 3: 发布草稿</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-4-normal-page"><span class="nav-number">3.</span> <span class="nav-text">Step 4: normal page</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-5-小tip"><span class="nav-number">4.</span> <span class="nav-text">Step 5: 小tip</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ruotong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a></div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
